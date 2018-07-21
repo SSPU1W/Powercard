@@ -1,19 +1,75 @@
 .cardEditorTemplate {
-    background-color: rgb(30,30,30);
-    width: 30vw;
-    height: 45vw;
-    margin: auto;
+    width: 18vw;
+    height: 30vw;
     border-radius: 2vw;
+    transition: all 0.2s ease;
+    margin-top: 2vw;
+    margin-left: 5vw;
 }
 
 .cardInputTextArea {
     border: none;
     background-color: rgba(0,0,0,0);
-    color: white;
     outline: none;
-    height: 80%;
+    height: 70%;
     width: 80%;
     font-weight: 600;
-    font-size: 4vw;
+    font-size: 1.8vw;
     padding: 2vw;
+    resize: none;
+    transition: all 0.2s ease;
+    line-height: 1.3;
+}
+.cardLight.cardEditorTemplate {
+    background-color: white;
+}
+.cardDark.cardEditorTemplate {
+    background-color: rgb(30,30,30);
+}
+.cardLight.cardInputTextArea {
+    color: rgb(30,30,30);
+}
+.cardDark.cardInputTextArea {
+    color: white;
+}
+
+
+.cardSelectorOptionArea {
+    display: flex;
+    margin: auto;
+    width: 90%;
+    margin: 1vw auto;
+    color: white;
+    justify-content: space-evenly;
+}
+
+.cardSelector {
+    font-size: 1.2vw;
+    cursor: pointer;
+    margin: 0 0.2vw;
+    transition: all 0.2s ease;
+    padding: 0.5vw 1vw;
+    background-color: rgb(53,127,218);
+    color: white;
+    box-shadow: 0 3px 1px -1px rgba(0,0,0,0.75);
+}
+
+.cardSelector:hover {
+    color: rgb(200,200,200);
+}
+
+
+.cardLight#whiteSelector {
+    background-color: rgb(50,50,50);
+    box-shadow: none;
+}
+.cardDark#blackSelector {
+    background-color: rgb(80,80,80);
+    box-shadow: none;
+}
+.cardDark#blackSelector:hover{
+    color: white;
+}
+.cardLight#whiteSelector:hover {
+    color: white
 }
