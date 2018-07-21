@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./InputFieldStyleSheet.css";
 
 export default class InputField extends Component {
   constructor(props) {
@@ -8,16 +9,8 @@ export default class InputField extends Component {
   render() {
     if (this.props.isShown) {
       return (
-        <div>
-          <form onSubmit={this.checkInputField()}>
-            <label class="form-input-title">Input Power Card Text</label>
-            <input class="form-input" type="text" />
-            <label class="form-label-title">Black Card</label>
-            <input class="form-radio-button" type="radio" name="CardSelector" />
-            <label class="form-label-title">White Card</label>
-            <input class="form-radio-button" type="radio" name="CardSelector" />
-            <input type="submit" />
-          </form>
+        <div className="cardEditorTemplate">
+          <textarea className="cardInputTextArea"/>
         </div>
       );
     } else {
@@ -25,5 +18,7 @@ export default class InputField extends Component {
     }
   }
 
-  checkInputField = () => {};
+  checkInputField = () => {
+
+  };
 }
